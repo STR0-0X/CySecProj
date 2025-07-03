@@ -1,4 +1,4 @@
-# Technical Report: Reverse Shell Delivery via `.desktop` Launcher
+# Reverse Shell Delivery via `.desktop` Launcher
 
 
 ## Objective
