@@ -112,16 +112,14 @@ If the user does not manually allow launching, the file will remain inert and ap
 
 ## Screenshots
 
-
 - Disguised file on Desktop  
-  `![Disguised File](disguised-file.png)`
+  `![Disguised File](images/disguised-file.png)`
 
 - User manually selects “Allow Launching”  
-  `![Allow Launching](allow-launching.png)`
+  `![Allow Launching](images/allow-launching.png)`
 
 - Reverse shell connection received  
-  `![Shell Connected](shell-connected.png)`
-
+  `![Shell Connected](images/shell-connected.png)`
 
 ---
 
