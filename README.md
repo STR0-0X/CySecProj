@@ -34,7 +34,23 @@
 
 - User operates under a non-restricted Linux desktop environment  
 - No outbound firewall blocking the reverse shell connection  
-- Default GNOME behavior is intact (trust prompt on `.desktop` files)  
+- Default GNOME behavior is intact (trust prompt on `.desktop` files)
+
+---
+
+## MITRE ATT&CK Techniques
+
+The following table maps the techniques used in this proof-of-concept to the [MITRE ATT&CK Framework](https://attack.mitre.org/):
+
+| Tactic                  | Technique                                 | ID            | Description |
+|-------------------------|-------------------------------------------|---------------|-------------|
+| **Initial Access**      | User Execution: Malicious File            | [T1204.002](https://attack.mitre.org/techniques/T1204/002/) | The `.desktop` file is disguised as a benign `README.txt` to trick the user into executing it. |
+| **Execution**           | Command and Scripting Interpreter: Bash   | [T1059.004](https://attack.mitre.org/techniques/T1059/004/) | Bash is used to execute the reverse shell payload. |
+| **Persistence** _(optional)_ | Scheduled Task/Job: Cron             | [T1053.003](https://attack.mitre.org/techniques/T1053/003/) | Explored for persistence but not used in final version. |
+| **Defense Evasion**     | Masquerading                              | [T1036](https://attack.mitre.org/techniques/T1036/) | The launcher file mimics a `.txt` document with a text icon and filename. |
+| **Command and Control** | Application Layer Protocol: Custom TCP    | [T1071.001](https://attack.mitre.org/techniques/T1071/001/) | The reverse shell uses a raw TCP connection (via Netcat). |
+
+--- 
 
 ### Limitations
 
