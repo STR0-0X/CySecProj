@@ -1,10 +1,5 @@
 # Technical Report: Reverse Shell Delivery via `.desktop` Launcher
 
-## Overview
-
-This report documents the creation, behavior, and deployment of a user-level reverse shell payload disguised as an innocent-looking file named `README.txt`. The file is implemented using a `.desktop` launcher file on Ubuntu, designed to socially engineer a user into executing it.
-
----
 
 ## Objective
 
